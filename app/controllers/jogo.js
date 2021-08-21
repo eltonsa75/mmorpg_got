@@ -1,10 +1,13 @@
 module.exports.jogo = function(application, req, res){
 
-    if(req.session.autoriazado){
-        res.render("jogo", {img_casa: req.session.casa});
-    } else {
-      res.send('Usuário precisa fazer login');  
+    if(req.session.autoriazado !== true){
+        res.send('Usuário precisa fazer login');
+        return;
     }
+
+    
+
+    res.render("jogo", {img_casa: req.session.casa});
 }
 
 module.exports.sair = function(application, req, res){
