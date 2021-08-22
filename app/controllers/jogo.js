@@ -18,5 +18,13 @@ module.exports.jogo = function(application, req, res){
 module.exports.sair = function(application, req, res){
    req.session.destroy( function(err){
        res.render("index", {validacao: {}});
-   })
+   });
+}
+
+module.exports.suditos = function(application, req, res){
+    res.render("aldeoes", {validacao: {}});
+}
+
+module.exports.pergaminhos = function(application, req, res){
+    res.render("pergaminhos", {validacao: {}});
 }
