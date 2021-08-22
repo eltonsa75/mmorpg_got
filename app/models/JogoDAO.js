@@ -38,11 +38,11 @@ JogoDAO.prototype.acao = function (acao) {
             var date = new Date();
             var tempo = null;
 
-            switch(acao.acao){
-                case 1: tempo * 60 * 60000;
-                case 2: tempo * 60 * 60000;
-                case 3: tempo * 60 * 60000;
-                case 4: tempo * 60 * 60000;
+            switch(parseInt(acao.acao)){
+                case 1: tempo * 60 * 60000; break;
+                case 2: tempo * 60 * 60000; break;
+                case 3: tempo * 60 * 60000; break;
+                case 4: tempo * 60 * 60000; break;
             }
                         
             acao.acao_termina_em = date.getTime() + tempo;
