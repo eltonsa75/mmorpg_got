@@ -27,13 +27,25 @@ module.exports.sair = function(application, req, res){
 }
 
 module.exports.suditos = function(application, req, res){
+    if(req.session.autoriazado !== true){
+        res.send('Usuário precisa fazer login');
+        return;
+    }
     res.render("aldeoes", {validacao: {}});
 }
 
 module.exports.pergaminhos = function(application, req, res){
+    if(req.session.autoriazado !== true){
+        res.send('Usuário precisa fazer login');
+        return;
+    }
     res.render("pergaminhos", {validacao: {}});
 }
 module.exports.ordenar_acao_sudito = function(application, req, res){
+    if(req.session.autoriazado !== true){
+        res.send('Usuário precisa fazer login');
+        return;
+    }
    
     var dadosForm = req.body;
 
