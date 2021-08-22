@@ -20,7 +20,6 @@ JogoDAO.prototype.gerarParametros = function (usuario) {
 }
 
 JogoDAO.prototype.iniciaJogo = function (res, usuario, casa, msg) {
-
     this._connection.open(function (err, mongoclient) {
         mongoclient.collection("jogo", function (err, collection) {
             collection.find({ usuario: usuario }).toArray(function (err, result) {
@@ -53,7 +52,17 @@ JogoDAO.prototype.acao = function (acao) {
     });
 }
 
-
+JogoDAO.prototype.getAcoes = function(usuario){
+    this._connection.open(function (err, mongoclient) {
+        mongoclient.collection("acao", function (err, collection) {
+            collection.find({ usuario: usuario }).toArray(function (err, result) {
+           
+                console.log(result);
+                mongoclient.close();
+            });
+        });
+    });
+}
 
 module.exports = function () {
     return JogoDAO;
