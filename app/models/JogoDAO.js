@@ -52,12 +52,11 @@ JogoDAO.prototype.acao = function (acao) {
     });
 }
 
-JogoDAO.prototype.getAcoes = function(usuario){
+JogoDAO.prototype.getAcoes = function(usuario, res){
     this._connection.open(function (err, mongoclient) {
         mongoclient.collection("acao", function (err, collection) {
             collection.find({ usuario: usuario }).toArray(function (err, result) {
-           
-                console.log(result);
+                res.render("pergaminhos", {acoes: result});
                 mongoclient.close();
             });
         });
