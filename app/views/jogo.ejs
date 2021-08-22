@@ -21,11 +21,23 @@
 			});
 
 			$('#btn_suditos').click(function(){
-				alert('BTN suditos clicando');
+				$.ajax({
+					url: '/suditos',
+					method: "get",
+					success: function(data){
+						$('#acoes').html(data);
+					}
+				})
 			});
 
 			$('#btn_pergaminho').click(function(){
-				alert('BTN pergaminho clicando');
+				$.ajax({
+					url: '/pergaminhos',
+					method: "get",
+					success: function(data){
+						$('#acoes').html(data);
+					}
+				})
 			});
 
 		});
