@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 /* configurar o middleware express-validator */
 app.use(expressValidator());
 
-/* configurar o middleware express-session */
+/* configura o middleware express-session */
 app.use(expressSession({
 	secret: 'hakjehrgkjahjer',
 	resave: false,
