@@ -42,6 +42,7 @@
 		 success: function(data){
 			 $('#acoes').html(data);
 			 clearInterval(timerId);
+
 			 cronometro();
 		 }
 	 });
@@ -89,6 +90,12 @@
 			<% if(msg == 'B') {%>
 				<div class="alert alert-info" id="msg">
 					<strong>Ação realizada com sucesso!</strong>
+				</div>
+			<% } %>
+
+			<% if(msg == 'C') {%>
+				<div class="alert alert-info" id="msg">
+					<strong>Senhor, a atividade ordenada foi finalizada!</strong>
 				</div>
 			<% } %>
 	    	

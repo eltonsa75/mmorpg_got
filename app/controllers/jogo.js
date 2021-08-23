@@ -1,6 +1,6 @@
 module.exports.jogo = function(application, req, res){
 
-    if(req.session.autoriazado !== true){
+    if(req.session.autorizado !== true){
         res.send('Usuário precisa fazer login');
         return;
     }
@@ -27,7 +27,7 @@ module.exports.sair = function(application, req, res){
 }
 
 module.exports.suditos = function(application, req, res){
-    if(req.session.autoriazado !== true){
+    if(req.session.autorizado !== true){
         res.send('Usuário precisa fazer login');
         return;
     }
@@ -35,7 +35,7 @@ module.exports.suditos = function(application, req, res){
 }
 
 module.exports.pergaminhos = function(application, req, res){
-    if(req.session.autoriazado !== true){
+    if(req.session.autorizado !== true){
         res.send('Usuário precisa fazer login');
         return;
     }
@@ -49,7 +49,7 @@ module.exports.pergaminhos = function(application, req, res){
 
 }
 module.exports.ordenar_acao_sudito = function(application, req, res){
-    if(req.session.autoriazado !== true){
+    if(req.session.autorizado !== true){
         res.send('Usuário precisa fazer login');
         return;
     }
