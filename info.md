@@ -19,3 +19,6 @@ Connect-Multiparty: Para upload de arquivos
 Criptografia unidirecional
 MD5 (hash de 30 posições)
 SHA1 (hash 40 posições)
+
+Criptografia bidirecional
+Base64
